@@ -25,6 +25,9 @@ services:
       target: development
     ports:
       - 8000:3000
+    volumes:
+      - .:/app
+      - /app/node_modules
     networks:
       - webnet
     depends_on:
