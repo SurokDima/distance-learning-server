@@ -18,10 +18,7 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@/*": ["src/*"],
-      "@user/*": ["src/user/*"],
-      "@course/*": ["src/course/*"],
-      "@flashcardsSet": ["src/flashcardsSet/*"]
+      "@/*": ["src/*"]
     }
   }
 }
