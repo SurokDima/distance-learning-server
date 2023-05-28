@@ -1,8 +1,20 @@
 import { Module } from '@nestjs/common';
 
-import { UserRepository } from '@/user/repositories/user.repository';
-
+import { UserController } from '@/user/controllers/user.controller';
+import { IUserRepository, IUserService } from '@/user/interfaces';
+import { UserFirebaseRepository } from '@/user/repositories/user.firebase.repository';
+import { UserService } from '@/user/services/user.service';
 @Module({
-  providers: [UserRepository],
+  controllers: [UserController],
+  providers: [
+    {
+      provide: IUserRepository,
+      useClass: UserFirebaseRepository,
+    },
+    {
+      provide: IUserService,
+      useClass: UserService,
+    },
+  ],
 })
 export class UserModule {}

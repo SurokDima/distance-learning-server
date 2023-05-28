@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 
-import { BaseRepository } from '@/core/BaseRepository';
+import { BaseFirebaseRepository } from '@/core/BaseRepository';
 
 @Injectable()
-export class FlashcardsSetRepository extends BaseRepository {
+export class FlashcardsSetRepository extends BaseFirebaseRepository {
   protected getCollectionName(): string {
     return 'flashcardsSet';
   }
