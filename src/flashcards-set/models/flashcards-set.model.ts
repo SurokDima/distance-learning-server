@@ -4,11 +4,18 @@ export interface IFlashcardsSetModel {
   id: string;
   name: string;
   cards: ICardModel[];
+  authorId: string;
+}
+
+export interface IFlashcardsSetWithUserModel {
+  id: string;
+  name: string;
+  cards: ICardModel[];
   author: IUserModel;
 }
 
 export interface ICardModel {
   id: string;
-  answer: string;
-  question: string;
+  frontSide: string;
+  backSide: string;
 }

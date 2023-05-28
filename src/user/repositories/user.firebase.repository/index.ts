@@ -3,6 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { BaseFirebaseRepository } from '@/core/BaseRepository';
 import { IQuery, WithoutID } from '@/interfaces';
 import { IUserEntity } from '@/user/entities/user.entity';
+import { IUserRepository } from '@/user/interfaces';
 import { IUserModel } from '@/user/models/user.model';
 import {
   mapPartialModelToPartialEntity,
@@ -11,7 +12,7 @@ import {
 } from '@/user/repositories/user.firebase.repository/mappers/user-entity.mapper';
 
 @Injectable()
-export class UserFirebaseRepository extends BaseFirebaseRepository {
+export class UserFirebaseRepository extends BaseFirebaseRepository implements IUserRepository {
   public async getOneUserById(userId: string): Promise<IUserModel | null> {
     const doc = await this.collection.doc(userId).get();
     if (!doc.exists) return null;

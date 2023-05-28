@@ -42,7 +42,7 @@ module.exports = {
     'unused-imports/no-unused-imports': 'error',
     'object-curly-spacing': ['error', 'always'],
     'consistent-return': 0,
-    'max-len': ['error', { code: 120 }],
+    'max-len': 0,
     '@typescript-eslint/naming-convention': [
       'error',
       {
@@ -92,5 +92,5 @@ module.exports = {
   },
   settings: {
     'import/resolver': {},
-  }
+  },
 };

@@ -1,14 +1,12 @@
-import { DocumentReference } from 'firebase-admin/firestore';
-
 export interface IFlashcardsSetEntity {
   id: string;
   name: string;
   cards: ICardEntity[];
-  author: DocumentReference;
+  authorId: string;
 }
 
 export interface ICardEntity {
   id: string;
-  answer: string;
-  question: string;
+  frontSide: string;
+  backSide: string;
 }

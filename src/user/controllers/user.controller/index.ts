@@ -1,6 +1,6 @@
 import { Controller, Get, Param } from '@nestjs/common';
 
-import { mapUserModelToUserDto } from '@/user/controllers/user.controller/mappers';
+import { mapUserModelToUserDto } from '@/user/mappers';
 import { GetUserByIdParams } from '@/user/dtos/get-user-params.dto';
 import { UserDto } from '@/user/dtos/user.dto';
 import { IUserService } from '@/user/interfaces';
