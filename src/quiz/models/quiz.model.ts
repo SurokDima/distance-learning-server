@@ -1,20 +1,20 @@
 export interface IQuizModel {
   id: string;
   name: string;
-  questions: IQuestionEntityCommon[];
+  questions: IQuestionModel[];
 }
 
 export type IQuestionModel = ISingleChoiceQuestionModel | IMultipleChoiceQuestionModel | IMapQuestionModel;
 
-interface IQuestionEntityCommon {
+interface IQuestionModelCommon {
   id: string;
   title: string;
 }
 
-export interface IChoiceQuestionModel extends IQuestionEntityCommon {
+export interface IChoiceQuestionModel extends IQuestionModelCommon {
   options: {
     id: string;
-    title: string;
+    text: string;
   }[];
 }
 
@@ -28,7 +28,7 @@ export interface IMultipleChoiceQuestionModel extends IChoiceQuestionModel {
   correctAnswerIds: string[];
 }
 
-export interface IMapQuestionModel extends IQuestionEntityCommon {
+export interface IMapQuestionModel extends IQuestionModelCommon {
   type: 'MAP';
   rows: {
     id: string;
@@ -36,7 +36,7 @@ export interface IMapQuestionModel extends IQuestionEntityCommon {
     correctAnswerId: string;
     options: {
       id: string;
-      title: string;
+      text: string;
     }[];
   };
 }

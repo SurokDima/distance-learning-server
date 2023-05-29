@@ -9,7 +9,7 @@ import {
   mapPartialModelToPartialEntity,
   mapUserEntityToModel,
   mapUserModelQueryToEntityQuery,
-} from '@/user/repositories/user.firebase.repository/mappers/user-entity.mapper';
+} from '@/user/repositories/user.firebase.repository/mappers';
 
 @Injectable()
 export class UserFirebaseRepository extends BaseFirebaseRepository implements IUserRepository {

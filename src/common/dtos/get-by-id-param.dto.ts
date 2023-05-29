@@ -1,6 +1,6 @@
 import { IsUUID } from 'class-validator';
 
-export class GetFlashcardsSetByIdParams {
+export class GetByIdParams {
   @IsUUID()
   public id: string;
 }

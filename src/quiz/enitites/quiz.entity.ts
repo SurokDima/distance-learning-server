@@ -1,7 +1,7 @@
 export interface IQuizEntity {
   id: string;
   name: string;
-  questions: IQuestionEntityCommon[];
+  questions: IQuestionEntity[];
 }
 
 export type IQuestionEntity = ISingleChoiceQuestionEntity | IMultipleChoiceQuestionEntity | IMapQuestionEntity;
@@ -14,7 +14,7 @@ interface IQuestionEntityCommon {
 export interface IChoiceQuestionEntity extends IQuestionEntityCommon {
   options: {
     id: string;
-    title: string;
+    text: string;
   }[];
 }
 
@@ -36,7 +36,7 @@ export interface IMapQuestionEntity extends IQuestionEntityCommon {
     correctAnswerId: string;
     options: {
       id: string;
-      title: string;
+      text: string;
     }[];
   };
 }
