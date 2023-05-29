@@ -1,15 +1,13 @@
-import { DocumentReference } from 'firebase-admin/firestore';
-
 export interface ICourseEntity {
   id: string;
   name: string;
-  author: DocumentReference;
+  authorId: string;
   assignments: AssignmentEntity[];
 }
 
 export interface IAssignmentEntityCommon {
   id: string;
-  entityRef: DocumentReference;
+  entityId: string;
 }
 
 export interface IFlashcardsSetAssignmentEntity extends IAssignmentEntityCommon {

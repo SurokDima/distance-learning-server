@@ -1,14 +1,14 @@
-import { UserDto } from '@/user/dtos/user.dto';
+import { IUserDto } from '@/user/dtos/user.dto';
 
-export class FlashcardsSetDto {
-  public id: string;
-  public name: string;
-  public cards: CardDto[];
-  public author: UserDto;
+export interface IFlashcardsSetDto {
+  id: string;
+  name: string;
+  cards: ICardDto[];
+  author: IUserDto;
 }
 
-class CardDto {
-  public id: string;
-  public frontSide: string;
-  public backSide: string;
+export interface ICardDto {
+  id: string;
+  frontSide: string;
+  backSide: string;
 }
