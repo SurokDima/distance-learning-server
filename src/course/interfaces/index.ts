@@ -6,4 +6,5 @@ export abstract class ICourseRepository {
 
 export abstract class ICourseService {
   public abstract getCourseById(courseId: string): Promise<ICourseWithAuthorModel | null>;
+  public abstract getManyCoursesByIds(ids: string[]): Promise<ICourseWithAuthorModel[]>;
 }

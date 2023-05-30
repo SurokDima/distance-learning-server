@@ -23,4 +23,25 @@ export class CourseService implements ICourseService {
       author,
     };
   }
+
+  public async getManyCoursesByIds(ids: string[]): Promise<ICourseWithAuthorModel[]> {
+    return Promise.all(
+      ids.map(async (id) => {
+        const course = await this.courseRepo.getOneCourseById(id);
+        if (!course) throw new Error('Course was not found');
+
+        const { authorId, ...restCourse } = course;
+        const author = await this.userRepo.getOneUserById(authorId);
+
+        if (!author) {
+          throw new Error('Author was not found');
+        }
+
+        return {
+          ...restCourse,
+          author,
+        };
+      }),
+    );
+  }
 }

@@ -4,4 +4,5 @@ export interface IUserEntity {
   lastName: string;
   email: string;
   password: string;
+  attendingCoursesIds: string[];
 }
