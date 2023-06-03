@@ -1,4 +1,4 @@
-import { IQuery } from '@/interfaces';
+import { IQuery } from '@/common/interfaces';
 import { IUserEntity } from '@/user/entities/user.entity';
 import { IUserModel } from '@/user/models/user.model';
 

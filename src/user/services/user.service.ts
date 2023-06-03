@@ -10,4 +10,10 @@ export class UserService implements IUserService {
   public getUserById(id: string): Promise<IUserModel | null> {
     return this.userRepo.getOneUserById(id);
   }
+
+  public getUserByAuth0Id(auth0Id: string): Promise<IUserModel | null> {
+    return this.userRepo.getOneUserBy({
+      auth0Id,
+    });
+  }
 }

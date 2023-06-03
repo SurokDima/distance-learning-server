@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 
-import { BaseFirebaseRepository } from '@/core/BaseRepository';
-import { IQuery, WithoutID } from '@/interfaces';
+import { BaseFirebaseRepository } from '@/common/core/BaseRepository';
+import { IQuery, WithoutID } from '@/common/interfaces';
 import { IUserEntity } from '@/user/entities/user.entity';
 import { IUserRepository } from '@/user/interfaces';
 import { IUserModel } from '@/user/models/user.model';

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import { BaseFirebaseRepository } from '@/core/BaseRepository';
+import { BaseFirebaseRepository } from '@/common/core/BaseRepository';
 import { IFlashcardsSetEntity } from '@/flashcards-set/entities/flashcards-set.entity';
 import { IFlashcardsSetRepository } from '@/flashcards-set/interfaces';
 import { IFlashcardsSetModel } from '@/flashcards-set/models/flashcards-set.model';

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import { BaseFirebaseRepository } from '@/core/BaseRepository';
+import { BaseFirebaseRepository } from '@/common/core/BaseRepository';
 import { IQuizEntity } from '@/quiz/enitites/quiz.entity';
 import { IQuizRepository } from '@/quiz/interfaces';
 import { IQuizModel } from '@/quiz/models/quiz.model';

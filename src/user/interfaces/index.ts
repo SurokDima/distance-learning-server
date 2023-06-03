@@ -1,4 +1,4 @@
-import { IQuery, WithoutID } from '@/interfaces';
+import { IQuery, WithoutID } from '@/common/interfaces';
 import { IUserModel } from '@/user/models/user.model';
 
 export abstract class IUserRepository {
@@ -10,4 +10,5 @@ export abstract class IUserRepository {
 
 export abstract class IUserService {
   public abstract getUserById(id: string): Promise<IUserModel | null>;
+  public abstract getUserByAuth0Id(auth0Id: string): Promise<IUserModel | null>;
 }

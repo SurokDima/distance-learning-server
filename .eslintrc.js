@@ -91,6 +91,7 @@ module.exports = {
     '@typescript-eslint/unbound-method': 'off',
   },
   settings: {
+    'import/internal-regex': '^@/',
     'import/resolver': {},
   },
 };

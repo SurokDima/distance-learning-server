@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import { BaseFirebaseRepository } from '@/core/BaseRepository';
+import { BaseFirebaseRepository } from '@/common/core/BaseRepository';
 import { ICourseEntity } from '@/course/entities/course.entity';
 import { ICourseRepository } from '@/course/interfaces';
 import { ICourseModel } from '@/course/models/course.model';

@@ -17,6 +17,7 @@ export const userServiceProvider: Provider = {
 };
 
 @Module({
+  // TODO fix passport module
   imports: [forwardRef(() => CourseModule)],
   controllers: [UserController],
   providers: [userRepoProvider, userServiceProvider],
