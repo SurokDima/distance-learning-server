@@ -88,6 +88,7 @@ module.exports = {
       },
     ],
 
+    '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/unbound-method': 'off',
   },
   settings: {

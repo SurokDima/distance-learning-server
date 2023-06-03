@@ -7,6 +7,7 @@ import { FlashcardsSetModule } from '@/flashcards-set/flashcards-set.module';
 import { QuizModule } from '@/quiz/quiz.module';
 import { UserModule } from '@/user/user.module';
 
+// TODO Add logging
 @Module({
   imports: [
     FlashcardsSetModule,
